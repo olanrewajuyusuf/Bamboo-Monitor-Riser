@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>FlexBox Tutorial</title>
+  </head>
+  <body>
+    <h1><u>FlexBox Tutorial</u></h1>
+    <div class="toggle"><div class="button"></div></div>
+    <article>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <section>
+        <h2>HTML</h2>
+        <p>
+          Are you interested in web development? Get started with the basic HTML
+          tutorial.
+        </p>
+        <blockquote>Min. <span>30</span></blockquote>
+      </section>
+      <section>
+        <h2>CSS</h2>
+        <p>
+          Cascading style sheet. let start styling our page in real time live.
+        </p>
+        <blockquote>Min. <span>30</span></blockquote>
+      </section>
+      <section>
+        <h2>JAVASCRIPT</h2>
+        <p>
+          Our web page is like a drawing with no functionality without
+          JavaScript. let learn how the user can interact with the UI
+        </p>
+        <blockquote>Min. <span>30</span></blockquote>
+      </section>
+      <section>
+        <h2>REACT</h2>
+        <p>
+          A JavaScript library which enable you to attach your html with
+          javascript in one go. Life is great.
+        </p>
+        <blockquote>Min. <span>30</span></blockquote>
+      </section>
+    </article>
+    <script>
+      const toggle = document.querySelector(".toggle");
+      const button = document.querySelector(".button");
+      const body = document.querySelector("body");
+      const heading = document.querySelector("h1");
+      const article = document.querySelector("article");
+
+      button.onclick = () => {
+        toggle.classList.toggle("left");
+        if (toggle.classList.contains("left")) {
+          toggle.style.justifyContent = "right";
+          body.style.background = "wheat";
+          body.style.fontFamily = "cursive";
+          heading.style.color = "rgb(9, 12, 17)";
+          article.style.borderColor = "rgb(9, 12, 17)";
+          toggle.style.borderColor = "rgb(9, 12, 17)";
+          button.style.background = "rgb(9, 12, 17)";
+        }
+        if (!toggle.classList.contains("left")) {
+          toggle.style.justifyContent = "left";
+          body.style.background =
+            "linear-gradient(45deg, rgb(9, 12, 17),rgb(16, 28, 49),rgb(18, 25, 37))";
+          body.style.fontFamily = "Courier New";
+          heading.style.color = "wheat";
+          article.style.borderColor = "wheat";
+          toggle.style.borderColor = "wheat";
+          button.style.background = "wheat";
+        }
+      };
+    </script>
+  </body>
+</html>
